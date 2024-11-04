@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const baseUrl = 'https://poezidashurie.com';
+const baseUrl = 'https://poezidashurieperty.com';
 const poems = JSON.parse(fs.readFileSync('./src/data/poems.ts', 'utf-8')
   .replace('export const poems:', '')
   .replace('export interface Poem {', '')
