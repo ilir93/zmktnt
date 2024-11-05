@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://poezidashurieperty.com/sitemap.xml
+Sitemap: https://www.poezidashurieperty.com/sitemap.xml
