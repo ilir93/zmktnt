@@ -42,11 +42,15 @@ function App() {
         </h1>
 
         <div className="max-w-3xl mx-auto">
-          <img 
-            src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=800&h=400" 
-            alt="Poezi Dashurie - Koleksioni i poezive më të bukura të dashurisë"
-            className="w-full rounded-lg shadow-lg mb-8"
-          />
+          <div className="aspect-[2/1] w-full mb-8">
+            <img 
+              src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=800&h=400" 
+              alt="Poezi Dashurie - Koleksioni i poezive më të bukura të dashurisë"
+              className="w-full h-full rounded-lg shadow-lg object-cover"
+              width={800}
+              height={400}
+            />
+          </div>
 
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
             Poezi Dashurie - Shprehni Ndjenjat Tuaja
