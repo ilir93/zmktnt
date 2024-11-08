@@ -6,7 +6,6 @@ import { poems } from './data/poems';
 
 function App() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const currentYear = new Date().getFullYear();
 
   const copyToClipboard = (text: string, index: number) => {
     navigator.clipboard.writeText(text);
@@ -27,18 +26,15 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-rose-100">
       <Header />
-
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë {currentYear}
+          65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë
         </h1>
-
         <div className="max-w-3xl mx-auto">
           <p className="text-lg text-gray-700 mb-12">
-            Dashuria është ndjenja më e bukur që mund të përjetojë njeriu. Këto poezi dashurie janë përzgjedhur me kujdes për të shprehur ndjenjat më të thella të zemrës. Çdo fjalë është një pikë e dashurisë së pastër që rrjedh nga shpirti i poetëve tanë të talentuar.
+            Dashuria është ndjenja më e bukur që mund të përjetojë njeriu. Këto poezi dashurie janë përzgjedhur me kujdes për të shprehur ndjenjat më të thella të zemrës.
           </p>
-
-          <div className="space-y-8">
+          <div className="space-y-12">
             {poems.map((poem, index) => (
               <PoemCard
                 key={index}
@@ -50,7 +46,6 @@ function App() {
               />
             ))}
           </div>
-
           <Footer />
         </div>
       </main>
