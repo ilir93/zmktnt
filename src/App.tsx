@@ -35,14 +35,27 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 to-rose-100">
       <Header />
+
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë {currentYear}
         </h1>
+
         <div className="max-w-3xl mx-auto">
+          <img 
+            src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=800&h=400" 
+            alt="Poezi Dashurie - Koleksioni i poezive më të bukura të dashurisë"
+            className="w-full rounded-lg shadow-lg mb-8"
+          />
+
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Poezi Dashurie - Shprehni Ndjenjat Tuaja
+          </h2>
+
           <p className="text-lg text-gray-700 mb-12">
-            Dashuria është ndjenja më e bukur që mund të përjetojë njeriu. Këto poezi dashurie janë përzgjedhur me kujdes për të shprehur ndjenjat më të thella të zemrës.
+            Dashuria është ndjenja më e bukur që mund të përjetojë njeriu. Këto <a href="https://www.poezidashurieperty.com/poezi-dashurie" className="text-rose-600 hover:text-rose-700">poezi dashurie</a> janë përzgjedhur me kujdes për të shprehur ndjenjat më të thella të zemrës. Vizitoni <a href="https://www.poezidashurieperty.com/koleksioni" className="text-rose-600 hover:text-rose-700">koleksionin tonë të plotë</a> për më shumë frymëzim. Për më shumë informacion rreth poezive të dashurisë, mund të vizitoni <a href="https://sq.wikipedia.org/wiki/Poezia_e_dashuris%C3%AB" className="text-rose-600 hover:text-rose-700" target="_blank" rel="noopener noreferrer">historinë e poezisë së dashurisë</a> ose <a href="https://www.goodreads.com/quotes/tag/love-poems" className="text-rose-600 hover:text-rose-700" target="_blank" rel="noopener noreferrer">thëniet më të bukura të dashurisë</a>.
           </p>
+
           <div className="space-y-12">
             {displayedPoems.map((poem, index) => (
               <PoemCard
@@ -55,6 +68,7 @@ function App() {
               />
             ))}
           </div>
+
           {hasMorePoems && (
             <div className="mt-12 text-center">
               <button
@@ -65,6 +79,7 @@ function App() {
               </button>
             </div>
           )}
+
           <Footer />
         </div>
       </main>
