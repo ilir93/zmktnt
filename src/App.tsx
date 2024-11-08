@@ -7,6 +7,7 @@ import { poems } from './data/poems';
 function App() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [visiblePoems, setVisiblePoems] = useState(10);
+  const currentYear = new Date().getFullYear();
 
   const copyToClipboard = (text: string, index: number) => {
     navigator.clipboard.writeText(text);
@@ -36,7 +37,7 @@ function App() {
       <Header />
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë
+          65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë {currentYear}
         </h1>
         <div className="max-w-3xl mx-auto">
           <p className="text-lg text-gray-700 mb-12">
