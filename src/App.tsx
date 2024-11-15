@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { PoemCard } from './components/PoemCard';
+import { AdBanner } from './components/AdBanner';
 import { Footer } from './components/Footer';
 import { poems } from './data/poems';
 
@@ -41,6 +42,8 @@ function App() {
           65 Poezi Dashurie të Bukura që të Gjithë Duhet t'i Dinë {currentYear}
         </h1>
 
+        <AdBanner />
+
         <div className="max-w-3xl mx-auto">
           <div className="aspect-[2/1] w-full mb-8">
             <img 
@@ -62,14 +65,16 @@ function App() {
 
           <div className="space-y-12">
             {displayedPoems.map((poem, index) => (
-              <PoemCard
-                key={index}
-                poem={poem}
-                index={index}
-                copiedIndex={copiedIndex}
-                onCopy={copyToClipboard}
-                onShare={shareContent}
-              />
+              <React.Fragment key={index}>
+                <PoemCard
+                  poem={poem}
+                  index={index}
+                  copiedIndex={copiedIndex}
+                  onCopy={copyToClipboard}
+                  onShare={shareContent}
+                />
+                {(index + 1) % 5 === 0 && <AdBanner />}
+              </React.Fragment>
             ))}
           </div>
 
